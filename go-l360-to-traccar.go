@@ -154,7 +154,7 @@ func circleUrl(id string) string {
 }
 
 func circleListUrl() string {
-	return fmt.Sprintf("https://%s/%s/%s", getenv("L360_HOST", "example.com"), "circles")
+	return fmt.Sprintf("https://%s/%s", getenv("L360_HOST", "example.com"), "circles")
 }
 
 func getenv(key, fallback string) string {
