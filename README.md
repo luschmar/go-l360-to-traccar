@@ -1,1 +1,6 @@
 # go-l360-to-traccar
+
+L360_HOST
+LBASIC
+LUSER
+LPASSWORD
