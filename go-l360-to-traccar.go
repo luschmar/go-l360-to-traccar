@@ -146,7 +146,7 @@ func authUrl() string {
 }
 
 func authAuthorization() string {
-	return fmt.Sprintf("Baisc %s", getenv("LBASIC", ""))
+	return fmt.Sprintf("Basic %s", getenv("LBASIC", ""))
 }
 
 func circleUrl(id string) string {
