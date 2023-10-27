@@ -142,7 +142,7 @@ func memberToRequest(member Member) string {
 }
 
 func authUrl() string {
-	return fmt.Sprintf("https://%s/%s", getenv("L360_HOST", "example.com"), "oauth2/token")
+	return fmt.Sprintf("https://%s/%s", getenv("L360_HOST", "example.com"), "oauth2/token.json")
 }
 
 func authAuthorization() string {
