@@ -45,7 +45,7 @@ type Location struct {
 }
 
 type Feature struct {
-	disconnected string
+	Disconnected string `json:"disconnected"`
 }
 
 type AuthResponse struct {
@@ -131,6 +131,17 @@ func getCircleList() {
 }
 
 func memberToRequest(member Member) string {
+	if member.Features.Disconnected == "1" {
+		fmt.Sprintf("http://%s/?id=%s&lat=%s&lon=%s&accuracy=%s&batt=%s&timestamp=%s&valid=false",
+			"10.0.0.10:3055",
+			member.Id,
+			member.Location.Latitude,
+			member.Location.Longitude,
+			member.Location.Accuracy,
+			member.Location.Battery,
+			member.Location.Timestamp)
+	}
+
 	return fmt.Sprintf("http://%s/?id=%s&lat=%s&lon=%s&accuracy=%s&batt=%s&timestamp=%s",
 		"10.0.0.10:3055",
 		member.Id,
