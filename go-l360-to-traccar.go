@@ -132,7 +132,7 @@ func getCircleList() {
 
 func memberToRequest(member Member) string {
 	if member.Features.Disconnected == "1" {
-		fmt.Sprintf("http://%s/?id=%s&lat=%s&lon=%s&accuracy=%s&batt=%s&timestamp=%s&valid=false",
+		return fmt.Sprintf("http://%s/?id=%s&lat=%s&lon=%s&accuracy=%s&batt=%s&timestamp=%s&valid=false",
 			"10.0.0.10:3055",
 			member.Id,
 			member.Location.Latitude,
